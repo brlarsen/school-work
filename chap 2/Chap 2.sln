@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ftoc", "ftoc\ftoc.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "money", "money\money.vcxproj", "{AD017263-70E3-43BD-89E3-6C339B226D4D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "roots", "roots\roots.vcxproj", "{50154441-3B74-407B-8F1B-95EC53A2C794}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{AD017263-70E3-43BD-89E3-6C339B226D4D}.Release|x64.Build.0 = Release|x64
 		{AD017263-70E3-43BD-89E3-6C339B226D4D}.Release|x86.ActiveCfg = Release|Win32
 		{AD017263-70E3-43BD-89E3-6C339B226D4D}.Release|x86.Build.0 = Release|Win32
+		{50154441-3B74-407B-8F1B-95EC53A2C794}.Debug|x64.ActiveCfg = Debug|x64
+		{50154441-3B74-407B-8F1B-95EC53A2C794}.Debug|x64.Build.0 = Debug|x64
+		{50154441-3B74-407B-8F1B-95EC53A2C794}.Debug|x86.ActiveCfg = Debug|Win32
+		{50154441-3B74-407B-8F1B-95EC53A2C794}.Debug|x86.Build.0 = Debug|Win32
+		{50154441-3B74-407B-8F1B-95EC53A2C794}.Release|x64.ActiveCfg = Release|x64
+		{50154441-3B74-407B-8F1B-95EC53A2C794}.Release|x64.Build.0 = Release|x64
+		{50154441-3B74-407B-8F1B-95EC53A2C794}.Release|x86.ActiveCfg = Release|Win32
+		{50154441-3B74-407B-8F1B-95EC53A2C794}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
