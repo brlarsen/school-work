@@ -24,8 +24,8 @@ int main()
 
 	//calculate discriminant
 	double discriminant = b * b - 4 * a * c;
-	// if discripminent is greater than or equal to 0
-	//do what you have done.
+	// if discriminant is greater than or equal to 0
+	// do what you have done.
 
 	if (discriminant >= 0)
 	{
