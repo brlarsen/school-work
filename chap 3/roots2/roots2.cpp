@@ -22,12 +22,34 @@ int main()
 	cout << "Please enter c: ";		//prompt
 	cin >> c;
 
-	double x1 = (-b + sqrt(b * b - 4 * a * c)) / (2 * a);
-	cout << "x1 = " << x1 << endl;
+	//calculate discriminant
+	double discriminant = b * b - 4 * a * c;
+	// if discripminent is greater than or equal to 0
+	//do what you have done.
 
-	double x2 = (-b - sqrt(b * b - 4 * a * c)) / (2 * a);
-	cout << "x2 = " << x2 << endl;
+	if (discriminant >= 0)
+	{
 
+		double x1 = (-b + sqrt(b * b - 4 * a * c)) / (2 * a);
+		cout << "x1 = " << x1 << endl;
 
+		double x2 = (-b - sqrt(b * b - 4 * a * c)) / (2 * a);
+		cout << "x2 = " << x2 << endl;
+
+	}
+	//else
+	else
+	{
+
+		// make a real variable and set equal to -b/2a
+		double real = -b / (2 * a);
+		// make a imag variable and set it equal to sqrt(-dis) /2a
+		double imag = sqrt(-discriminant) / (2 * a);
+
+		// display both outputs
+		cout << "x1 = " << real << " + " << imag << "i" << endl;
+		cout << "x2 = " << real << " - " << imag << "i" << endl;
+
+	}
 	return 0;
 }
