@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include "sterling.h"
 using namespace std;
 
@@ -17,11 +18,11 @@ sterling	make_sterling(int pe)
 	sterling	temp;
 
 	temp.pounds = pe / 240;
-	pe % 240;
+	pe %= 240;
 	temp.shillings = pe / 12;
-	temp.pence = pe % 12
+	temp.pence = pe % 12;
 
-		return temp;
+	return temp;
 }
 
 sterling add(sterling st1, sterling st2)
@@ -32,9 +33,11 @@ sterling add(sterling st1, sterling st2)
 	return make_sterling(i1 + i2);
 }
 
-void print(sterling& st);
+void print(sterling& st)
 {
-	cout << (char)156 << st.pounds << "." << st.shillings << "." << st.pence << endl
+	cout.fill('0');
+	cout << (char)156 << st.pounds << "." << setw(2) << st.shillings << "." << setw(2) << st.pence << endl;
+	cout.fill(' ');
 }
 
 void read(sterling* st)
