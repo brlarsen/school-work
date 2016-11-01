@@ -48,10 +48,13 @@ void histogram(int *scores, int count, int (&histogram)[10])
 	for (int i = 0; i < count; i++)
 	{
 
-		int temp = static_cast<int>(scores[i] / 10);
-		if (temp >= 10)
-			temp = 9;
-		histogram[temp]++;
+		histogram[scores[i] / 10 - scores[i] / 100]++;
+
+		//int temp = static_cast<int>(scores[i] / 10);
+		//if (temp >= 10)
+		//	temp = 9;
+		//histogram[temp]++;
+		
 	}
 	
 
