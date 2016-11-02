@@ -1,4 +1,4 @@
-/*#include <iostream>
+#include <iostream>
 #include <string>
 using namespace std;
 
@@ -17,8 +17,8 @@ int main()
 	string	input;
 
 	cout << " Enter Palindrome: ";
-	//cout << input << endl;	// stops at space	
-	getline(cin, input);		// discards \n
+	
+	getline(cin, input);		
 	cout << input << endl;
 
 	for (int i = 0; i < input.length(); i++)
@@ -38,5 +38,3 @@ int main()
 
 		return 0;
 }
-
-*/
