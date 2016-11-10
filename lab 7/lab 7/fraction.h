@@ -1,6 +1,9 @@
 #pragma once
 
 
+#ifndef FRACTION_H
+#define FRACTION_H
+
 
 class fraction
 {
@@ -9,9 +12,20 @@ class fraction
 		int		denominator;
 
 	public:
-				fraction(int n = 0, int d = 1) : numerator(n), denominator(d) {}
-		int		common = gcd(numerator, denominator);
-		numerator /= common;
-		denominator /= common;
+		fraction();
+		fraction(int n, int d);
+		int gcd(int num, int den);
 		
+		//add these functions
+		//add, sub, mult, div
+
+		fraction add(fraction);
+		fraction sub(fraction);
+		fraction mult(fraction);
+		fraction div(fraction);
+		
+		void read();
+		void print();
 };
+
+#endif
