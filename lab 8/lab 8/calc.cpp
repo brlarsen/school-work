@@ -5,6 +5,7 @@ using namespace std;
 
 int main() {
 	char choice; fraction left; fraction right; fraction result;
+
 	do {
 		cout << "A\tAdd\n";
 		cout << "S\tSub\n";
@@ -16,28 +17,28 @@ int main() {
 		cin >> choice; cin.ignore();
 		switch (choice) {
 		case 'A': case 'a':
-			left.read();
-			right.read();
-			result = left.add(right);
-			result.print();
+			cin >> left;
+			cin >> right;
+			result = left + right;
+			cout << result;
 			break;
 		case 'S': case 's':
-			left.read();
-			right.read();
-			result = left.sub(right);
-			result.print();
+			cin >> left;
+			cin >> right;
+			result = left - right;
+			cout << result;
 			break;
 		case 'M': case 'm':
-			left.read();
-			right.read();
-			result = left.mult(right);
-			result.print();
+			cin >> left;
+			cin >> right;
+			result = left * right;
+			cout << result;
 			break;
 		case 'D': case 'd':
-			left.read();
-			right.read();
-			result = left.div(right);
-			result.print();
+			cin >> left;
+			cin >> right;
+			result = left / right;
+			cout << result;
 			break;
 		case 'e': case 'E': break;
 		default:

@@ -23,6 +23,14 @@ public:
 	fraction sub(fraction);
 	fraction mult(fraction);
 	fraction div(fraction);
+	
+	fraction operator+(fraction f);
+	fraction operator-(fraction f);
+	fraction operator*(fraction f);
+	fraction operator/(fraction f);
+	friend std::ostream& operator<<(std::ostream& out, fraction& f);
+	friend std::istream& operator>>(std::istream& in, fraction& f);
+
 
 	void read();
 	void print();

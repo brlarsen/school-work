@@ -57,6 +57,28 @@ fraction fraction::div(fraction f)
 	return fraction(numerator * f.denominator, denominator * f.numerator);
 }
 
+fraction fraction::operator+(fraction f)
+{
+	return fraction(numerator * f.denominator + f.numerator * denominator, denominator * f.denominator);
+}
+
+fraction fraction::operator-(fraction f)
+{
+	return fraction(numerator * f.denominator - f.numerator * denominator, denominator * f.denominator);
+}
+
+fraction fraction::operator*(fraction f)
+{
+	return fraction(numerator * f.numerator, denominator * f.denominator);
+}
+
+fraction fraction::operator/(fraction f)
+{
+	return fraction(numerator * f.denominator, denominator * f.numerator);
+}
+
+
+
 void fraction::read()
 {
 	cout << "Please enter in the numerator: ";
@@ -70,4 +92,22 @@ void fraction::print()
 {
 	cout << numerator << " / " << denominator << endl;
 
+}
+
+ostream & operator<<(ostream& out, fraction& f)
+{
+	out << f.numerator << " / " << f.denominator << endl;
+
+	return out;
+}
+
+istream & operator >> (istream& in, fraction& f)
+{
+	cout << "Please enter in the numerator: ";
+	cin >> f.numerator;
+
+	cout << "Please enter in the denominator: ";
+	cin >> f.denominator;
+
+	return in;
 }
