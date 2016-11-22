@@ -11,7 +11,7 @@ class Address
 
 	public:
 	
-		Address(string a_street, string a_city)
+		Address(string a_street, string a_city);
 
 
 

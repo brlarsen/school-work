@@ -11,7 +11,7 @@ private:
 	int day;
 
 public:
-	Date(int a_year, int a_month, int a_day)
+	Date(int a_year, int a_month, int a_day);
 
 
 
