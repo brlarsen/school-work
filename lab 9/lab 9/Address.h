@@ -1,6 +1,7 @@
 #ifndef _ADDRESS_H_
 #define _ADDRESS_H_
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Address
@@ -11,21 +12,20 @@ class Address
 
 	public:
 	
-		Address(string a_street, string a_city);
+		Address(string a_street, string a_city) :
+		street(a_street), city(a_city) {}
 
 
-
-
-	void display
-		{
-
-		}
+	void display()
+	{
+		cout << street << endl << city << endl;
+	}
 
 	friend ostream& operator << (ostream& out, Address& me)
-		{
-
-
-		}
+	{
+		out << me.street << endl << me.city << endl;
+		return out;
+	}
 	
 };
 

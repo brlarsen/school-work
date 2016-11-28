@@ -15,8 +15,8 @@ private:
 
 public:
 
-	~Employee() {}
-	Employee(string a_name, int a_year, int a_month, int a_day) : Date(a_year, a_month, a_day), name(a_name) {}
+	~Employee() { if (addr != NULL) delete addr; }
+	Employee(string a_name, int a_year, int a_month, int a_day) : d(a_year, a_month, a_day), name(a_name), addr(NULL) {}
 	
 		
 		
@@ -29,12 +29,18 @@ public:
 
 	void display()
 	{
-		cout << name << " " << addr->display() << " " << d.display() << endl;
+		cout << name << " " << endl;
+		addr->display();
+		d.display();
 	}
 	
 	friend ostream& operator << (ostream& out, Employee& me)
 	{
-
+		out << me.name;
+		if (me.addr != NULL)
+			out << " " << *me.addr;
+		out << " " << me.d;
+		return out;
 
 	}
 };

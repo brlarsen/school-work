@@ -17,13 +17,14 @@ class SalesEmployee : public SalariedEmployee
 
 		void display()
 		{
-			cout << SalariedEmployee::display() << " " << commission << " " << sales << endl;
+			SalariedEmployee::display();
+			cout <<" " << commission << " " << sales << endl;
 		}
 
 		friend ostream& operator << (ostream& out, SalesEmployee& me)
 		{
-			// this seems wrong
-			out << me.SalariedEmployee :: name << " " << me.
+			out << (SalariedEmployee&)me << " " << me.sales << " " << me.commission;
+			return out;
 		}
 
 

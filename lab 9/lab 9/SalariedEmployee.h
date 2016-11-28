@@ -15,14 +15,16 @@ public:
 		:Employee(name, a_year, a_month, a_day), salary(a_salary) {}
 
 
-	void display
+	void display()
 	{
-		cout << Employee::display() << " " << salary << endl;
+		Employee::display();
+		cout << " " << salary << endl;
 	}
 
 	friend ostream& operator << (ostream& out, SalariedEmployee& me)
 	{
-
+		out << (Employee&)me << " " << me.salary;
+		return out;
 
 	}
 };
