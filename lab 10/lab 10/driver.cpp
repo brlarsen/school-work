@@ -5,7 +5,6 @@
 #include "Date.h"
 #include "Address.h"
 #include "CList.h"
-#include ""
 #include <iostream>
 #include <string>
 
@@ -20,8 +19,6 @@ void prompt(const char* message, double& number);
 int main()
 {
 	CList clist;
-	clist.insert(new WagedEmployee("John Wayne", 10.50, 40, 2016, 12, 1));
-	clist.insert(new SalariedEmployee("Jane Wayne", 35000.00, 2016, 12, 1));
 	
 	while (true)
 	{
@@ -29,7 +26,7 @@ int main()
 		cout << "1. Waged Employee" << endl;
 		cout << "2. Salaried Employee" << endl;
 		cout << "3. Sales Employee" << endl;
-		//cout << "4. List" << endl << endl;		// used in a future lab
+		cout << "4. List" << endl << endl;		// used in a future lab
 		cout << "5. Exit" << endl << endl;
 		cout << "Choose an Employee or an Action: ";
 
@@ -60,8 +57,9 @@ int main()
 			prompt("City", city);
 			WagedEmployee* we = new WagedEmployee(name, wage, hours, year, month, day);
 			we->setAddress(street, city);
-			cout << *we << endl;
-			we->display();
+			clist.insert(we);
+			//cout << *we << endl;
+			//we->display();
 			break;
 		}
 
@@ -77,8 +75,9 @@ int main()
 			prompt("City", city);
 			SalariedEmployee* se = new SalariedEmployee(name, salary, year, month, day);
 			se->setAddress(street, city);
-			cout << *se << endl;
-			se->display();
+			clist.insert(se);
+			//cout << *se << endl;
+			//se->display();
 			break;
 		}
 
@@ -98,13 +97,17 @@ int main()
 			prompt("City", city);
 			SalesEmployee* se = new SalesEmployee(name, salary, commission, sales, year, month, day);
 			se->setAddress(street, city);
-			cout << *se << endl;
-			se->display();
+			clist.insert(se);
+			//cout << *se << endl;
+			//se->display();
 			break;
 		}
 
-		//case '4' :
-		//	break;
+		case '4' :
+		{
+			clist.list();
+			break;
+		}
 
 		case '5':
 			exit(0);
