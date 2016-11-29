@@ -18,7 +18,7 @@ void prompt(const char* message, double& number);
 
 int main()
 {
-	CList clist;
+	CList<Employee> clist;
 	
 	while (true)
 	{

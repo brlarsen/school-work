@@ -22,8 +22,9 @@ public:
 	virtual double calcPay() = 0;
 
 	string getName()
+	{
 		return name;
-
+	}
 	
 	void setAddress(string a_street, string a_city) 
 	{
@@ -32,7 +33,7 @@ public:
 		addr = new Address(a_city, a_street);
 	}
 
-	void display()
+	virtual void display()
 	{
 		cout << name << " " << endl;
 		addr->display();

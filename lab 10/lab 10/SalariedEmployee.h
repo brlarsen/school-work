@@ -14,11 +14,16 @@ public:
 	SalariedEmployee(string name, double a_salary, int a_year, int a_month, int a_day)
 		:Employee(name, a_year, a_month, a_day), salary(a_salary) {}
 
+	virtual double calcPay()
+	{
+		return salary / 24;
+	}
+		
 
-	void display()
+	virtual void display()
 	{
 		Employee::display();
-		cout << " " << salary << endl;
+		cout << " " << salary << " " << calcPay() << endl;
 	}
 
 	friend ostream& operator << (ostream& out, SalariedEmployee& me)

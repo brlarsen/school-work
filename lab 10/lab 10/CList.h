@@ -7,16 +7,18 @@ using namespace std;
 template <class T>
 class CList 
 {
+
 private:
 	T* data; 
 	CList* link;
+
 public:
 	CList() : data(NULL) { link = this; } 
 	~CList();
 	T* insert(T* p); 
 	T* search(T* p); 
 	T* remove(T* p); 
-	template void list();
+	void list();
 };
 
 template <class T>
@@ -88,7 +90,8 @@ T* CList<T>::search(T* key) {
 }
 
 template <class T>
-void CList<T>::list() {
+void CList<T>::list() 
+{
 	for (CList* l = this->link; l != this; l = l->link)
 		l->data->display();
 }
