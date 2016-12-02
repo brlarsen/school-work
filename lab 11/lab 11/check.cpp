@@ -16,7 +16,7 @@ int main() {
 	string line; //while (getline(in, line))
 				   // cout << line << endl;
 	// figure this out**********************************
-	for (int i = 0; i > 55; i++)
+	for (int i = 0; i < 55 + 1; i++)
 	{
 		cout << '-';
 	}
@@ -44,10 +44,11 @@ int main() {
 		else
 			balance = balance - moneyValue;
 	} 
-	for (int i = 0; i > 55; i++)
+	for (int i = 0; i < 55 + 1; i++)
 	{
 		cout << '-';
 	}
+	
 	cout << endl;
 
 	// print balance
