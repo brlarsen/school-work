@@ -5,9 +5,12 @@
 using namespace std;
 
 int main() {
-	ifstream in("checkbook.txt");
+	string inputFile;
+	cout << " Enter File Name (with Extension: )";
+	getline(cin, inputFile);
+	ifstream in(inputFile);
 	if (!in.good()) {
-		cerr << "Unable to open checkbook.txt" << endl; 
+		cerr << "Unable to open " + inputFile << endl; 
 		exit(1);
 	}
 	cout.setf(ios::fixed);
